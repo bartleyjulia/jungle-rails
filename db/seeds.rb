@@ -132,5 +132,12 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+## USERS
 
+dummy_user = User.create({
+  first_name: 'Pearl',
+  last_name: 'Sparkes',
+  email: 'pearl@gmail.com'
+  password_digest: 'xxxx'
+  })
 puts "DONE!"
