@@ -5,15 +5,19 @@ class OrdersController < ApplicationController
   def show
     @order = Order.includes(:line_items => [:product]).find(params[:id])
     # @line_items = LineItem.find(params[:id])
+
   end
 
   def create
     charge = perform_stripe_charge
     order  = create_order(charge)
-
+    # user = @order
+    @order = Order.includes(:line_items => [:product]).find(order.id)
     if order.valid?
       empty_cart!
       redirect_to order, notice: 'Your Order has been placed.'
+      # function for sending email = needs user info
+      OrderMailer.order_email(@order).deliver_later
     else
       redirect_to cart_path, flash: { error: order.errors.full_messages.first }
     end

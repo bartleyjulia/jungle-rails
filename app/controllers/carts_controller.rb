@@ -1,6 +1,7 @@
 class CartsController < ApplicationController
 
   def show
+    @user = "blahblahblah"
   end
 
   def add_item

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Welcome to example.com, <%= @order_info.id %></h1>
+    <%= @order %>
+    <p>
+      You have successfully signed up to example.com,
+      your username is: <%= @order_info.total %>.<br>
+    </p>
+    <p>
+      <% @order_info.line_items.each do |item|   %>
+
+      <tr>
+
+        <td>
+          <h4><%= item.product.name %></h4>
+          <br>
+          <p><%= item.product.description %></p>
+        </td>
+
+        <td>
+          <%= item.product.price %>
+        </td>
+      </tr>
+      <% end %>
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
