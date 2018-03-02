@@ -19,9 +19,8 @@
         <% end %>
       </tbody>
     </table>
-<% total = @order.total_cents.to_f / 100 %>
 
-    <%= "Order total $" %><%= total %>
+    <%= "Order total $" %><%= @order.total  %>
     <%= "Order email: " %><%= @order.email %>
   </div>
 </div>
