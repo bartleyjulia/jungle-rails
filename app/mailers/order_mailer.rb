@@ -5,6 +5,6 @@ class OrderMailer < ApplicationMailer
     @order_info = order_info
 
     # variable for accessing order id
-    mail(to: @order_info.email, subject: "order ID"@order_info.id)
+    mail(to: @order_info.email, subject: "Order number: #{ @order_info.id } ")
   end
 end
