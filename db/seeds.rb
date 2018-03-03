@@ -132,12 +132,40 @@ cat3.products.create!({
   price: 2_483.75
 })
 
-## USERS
-
-dummy_user = User.create({
-  first_name: 'Pearl',
-  last_name: 'Sparkes',
-  email: 'pearl@gmail.com'
-  password_digest: 'xxxx'
+##USERS
+user_1 = User.create({
+  first_name: "bill",
+  last_name: "bill",
+  email: "bill@bill.bill",
+  password_digest: "$2a$10$.yx1OBycsX1XLUUfle4S.eo9Z5T52x/9Ba0WLTwlce8uQTVk2XQ0G"
   })
-puts "DONE!"
+
+##reviews
+
+dummy_review_1 = Review.create({
+  product_id: 1,
+  user_id: 1,
+  description: "This thing sucks",
+  rating: 1,
+  })
+
+dummy_review_2 = Review.create({
+  product_id: 1,
+  user_id: 1,
+  description: "This thing rocks",
+  rating: 5,
+  })
+
+dummy_review_3 = Review.create({
+  product_id: 1,
+  user_id: 1,
+  description: "This thing rolls",
+  rating: 4,
+  })
+
+dummy_review_4 = Review.create({
+  product_id: 1,
+  user_id: 1,
+  description: "This thing doesn't work",
+  rating: 1,
+  })

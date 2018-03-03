@@ -36,6 +36,7 @@
   <div class="row">
     <div class="col-xs-12">
       <%= form_tag orders_path do %>
+      <% if current_user %>
         <script
           src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
@@ -46,6 +47,7 @@
           data-email="<%= current_user.email %>"
           data-currency="cad">
         </script>
+      <% end %>
       <% end %>
     </div>
   </div>

@@ -1,7 +1,19 @@
 class CartsController < ApplicationController
 
   def show
-    @user = "blahblahblah"
+
+    puts "#{ cart.inspect } **************************************************"
+    if cart == {}
+      render :new 
+    else
+      render :show
+    end
+
+    # if current_user
+    #   render :show
+    # else
+    #   redirect_to '/login'
+    # end
   end
 
   def add_item
