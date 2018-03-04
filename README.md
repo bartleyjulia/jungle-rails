@@ -5,13 +5,13 @@ A mini e-commerce application built with Rails 4.2.
 
 !["Main page photo"](https://github.com/bartleyjulia/jungle-rails/blob/master/docs/main_page.png)
 
-## Displays dynamic roder totals (with photos!)
+## Displays dynamic order totals (with photos!)
 !["Order photo"](https://github.com/bartleyjulia/jungle-rails/blob/master/docs/order_detail.png)
 
 ## Crisp, clean styling, just like this shirt!
 !["Product photo"](https://github.com/bartleyjulia/jungle-rails/blob/master/docs/product_detail.png)
 
-## Comes with a built-in reminder to engage in the great North American past-time
+## Comes with a built-in reminder to consume!
 !["Cart empty"](https://github.com/bartleyjulia/jungle-rails/blob/master/docs/cart_empty.png)
 
 ## Download today!!
