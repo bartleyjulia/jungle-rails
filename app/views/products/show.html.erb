@@ -27,8 +27,14 @@
           <% @reviews.reverse.each do |review| %>
             <dd><%= review.user.first_name %></dd>
             <dd><%= review.description %></dd>
-            <dd><%= review.rating %></dd>
-            <dd><%= review.created_at %></dd>
+            <dt>Rating</dt>
+            <% arr = Array.new(5) %>
+            <% count = review.rating %>
+            <% for i in 0..4 %>
+            <% count - 1 >= 0 ? arr[i] = 'star' : arr[i] = 'star-o' %>
+            <% count -= 1  %>
+            <% end %>
+            <dd><%= fa_icon arr[0] %> <%= fa_icon arr[1] %> <%= fa_icon arr[2] %> <%= fa_icon arr[3] %> <%= fa_icon arr[4] %></dd>
             <% if current_user %>
             <% if review.user_id == current_user.id %>
               <%= link_to fa_icon('trash'), product_review_path(:product_id => @product.id, :id => review.id), class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: "Are you sure?" } %>
@@ -37,6 +43,10 @@
           <% end %>
         </dl>
       </div>
+    </article>
+    <article>
+      <div>
+        <dl class="dl-horizontal">
       <% if current_user %>
       <%= form_for ([@product, @newReview]) do |form| %>
 
@@ -52,7 +62,8 @@
       <%= form.submit 'Add Review', class: 'btn btn-primary' %>
 
       <% end %>
-
+    </dl>
+</div>
 <% end %>
 
 

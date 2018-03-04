@@ -1,4 +1,5 @@
 
+<% product_total = product.price * quantity %>
 <tr>
   <td>
     <%= image_tag product.image.tiny %>
@@ -10,6 +11,6 @@
   </td>
 
   <td>
-    <%= product.price %>
+    <%= product_total  %>
   </td>
 </tr>

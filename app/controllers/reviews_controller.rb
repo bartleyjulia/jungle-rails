@@ -7,7 +7,7 @@ class ReviewsController < ApplicationController
     @review.user = current_user
     @review.product_id = params["product_id"]
     if @review.save
-      redirect_to [:products]
+      redirect_to :back
     else
       redirect_to [:cart]
     end
@@ -16,7 +16,7 @@ class ReviewsController < ApplicationController
   def destroy
     @reviewDelete = Review.find params[:id]
     @reviewDelete.destroy
-    redirect_to [:products], notice: 'Product deleted!'
+    redirect_to :back, notice: 'Product deleted!'
   end
 
   private def review_params
