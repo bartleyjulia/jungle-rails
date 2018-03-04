@@ -4,9 +4,9 @@ A mini e-commerce application built with Rails 4.2.
 
 !["Main page photo"](https://github.com/bartleyjulia/jungle-rails/blob/master/docs/main_page.png)
 
-!["Order photo"] (https://github.com/bartleyjulia/jungle-rails/blob/master/docs/order_detail.png)
-!["Product photo"] (https://github.com/bartleyjulia/jungle-rails/blob/master/docs/product_detail.png)
-!["Cart empty"] (https://github.com/bartleyjulia/jungle-rails/blob/master/docs/cart_empty.png)
+!["Order photo"](https://github.com/bartleyjulia/jungle-rails/blob/master/docs/order_detail.png)
+!["Product photo"](https://github.com/bartleyjulia/jungle-rails/blob/master/docs/product_detail.png)
+!["Cart empty"](https://github.com/bartleyjulia/jungle-rails/blob/master/docs/cart_empty.png)
 
 
 ## Dependencies
